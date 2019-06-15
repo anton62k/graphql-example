@@ -1,0 +1,6 @@
+endpoint: https://eu1.prisma.sh/antonkashirov-da44ba/artland/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: typescript-client
+    output: ./src/generated/prisma-client/
