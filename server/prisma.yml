@@ -1,5 +1,5 @@
 endpoint: https://eu1.prisma.sh/antonkashirov-da44ba/artland/dev
-datamodel: datamodel.prisma
+datamodel: datamodel.graphql
 
 generate:
   - generator: typescript-client
