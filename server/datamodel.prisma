@@ -1,4 +1,24 @@
 type User {
   id: ID! @id
   name: String!
+  createdAt: DateTime! @createdAt
+  posts: [Post!]!
+}
+
+type Post {
+  id: ID! @id
+  title: String!
+  artist: String!
+  image: String
+  createdAt: DateTime! @createdAt
+  user: User!
+  comments: [Comment!]!
+}
+
+type Comment {
+  id: ID! @id
+  text: String!
+  createdAt: DateTime! @createdAt
+  user: User!
+  post: Post!
 }
