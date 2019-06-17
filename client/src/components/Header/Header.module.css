@@ -1,0 +1,10 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  height: 60px;
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+}

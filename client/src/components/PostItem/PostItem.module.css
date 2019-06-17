@@ -1,0 +1,56 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 352px;
+  height: 450px;
+  border: 1px solid lightgrey;
+  margin: 15px;
+  animation: appear 300ms linear;
+  border-radius: 5px;
+}
+
+.loading {
+  border: none;
+  width: 352px;
+  height: 450px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.header h3 {
+  margin-bottom: 0;
+}
+
+.image {
+  height: 200px;
+  overflow-y: hidden;
+}
+
+.image img {
+  width: 350px;
+}
+
+.numberComments {
+  margin: 0 10px;
+}
+
+.numberComments h3 {
+  margin-bottom: 0;
+  color: lightgrey;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

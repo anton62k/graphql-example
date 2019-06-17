@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "antd/lib/date-picker/style/css";
-import { Button } from "antd";
+import { App } from "./components/App/App";
+import "antd/dist/antd.css";
 
-ReactDOM.render(<Button>All work!</Button>, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
