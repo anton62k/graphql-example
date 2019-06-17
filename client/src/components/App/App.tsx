@@ -4,9 +4,10 @@ import { Header } from "../Header/Header";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import { PostList } from "../PostList/PostList";
+import { getGraphqlPath } from "../../utils/getPaths";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/"
+  uri: getGraphqlPath()
 });
 
 export const App: FunctionComponent = () => (
