@@ -15,7 +15,7 @@ const Item: FunctionComponent<DeleteItemProps> = ({ id, deletePost }) => (
 );
 
 export const DeleteButton = graphql<DeleteItemProps>(DELETE_POST, {
-  name: "onDelete",
+  name: "deletePost",
   options: {
     update: updateGetPosts
   }
