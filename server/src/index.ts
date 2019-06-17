@@ -1,8 +1,10 @@
-import { prisma, User } from "./generated/prisma-client";
+import { prisma } from "./generated/prisma-client";
+import { GraphQLServer } from "graphql-yoga";
+import { resolvers } from "./resolves/";
 
-async function main() {
-  const users: User[] = await prisma.users();
-  console.log(`Number of users: ${users.length}`);
-}
-
-main();
+const server: GraphQLServer = new GraphQLServer({
+  typeDefs: "./src/server.graphql",
+  resolvers,
+  context: params => ({ ...params, prisma })
+});
+server.start(() => console.log("Server running on localhost:4000"));

@@ -1,0 +1,30 @@
+scalar DateTime
+
+type Post {
+  id: String!
+  title: String!
+  artist: String!
+  createdAt: DateTime!
+  image: String!
+  comments: [Comment!]!
+}
+
+type Query {
+  post(id: String!): Post
+  posts: [Post!]!
+  comments: [Comment!]!
+}
+
+type Comment {
+  id: String!
+  text: String!
+  createdAt: DateTime!
+  post: Post!
+}
+
+type Mutation {
+  createPost(title: String, artist: String, image: String): Post
+  deletePost(id: String): Post
+  createComment(text: String, postId: String): Comment
+  deleteComment(id: String): Comment
+}
